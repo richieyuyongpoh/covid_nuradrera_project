@@ -4,8 +4,8 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
 st.write("""
-# Simple Iris Flower Prediction App
-This app predicts the **Iris flower** type!
+# Simple COVID-19 Prediction App
+This app predicts whether you are infected with Covid-19 or not based on your symptoms!
 """)
 
 st.sidebar.header('User Input Parameters')
