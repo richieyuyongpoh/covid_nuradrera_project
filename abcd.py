@@ -10,7 +10,7 @@ This app predicts whether you are infected with Covid-19 or not based on your sy
 st.sidebar.header('User Input Parameters')
 
 def user_input_features():
-    BP = st.sidebar.selectbox('Do you have Breathing Problem?',['Yes','No'])
+    BP = st.sidebar.selectbox('Do you have Breathing Problem?',['Yes','No']),
     FVR = st.sidebar.selectbox('Do you have Fever?',['Yes','No'])
     DC = st.sidebar.selectbox('Do you have Dry Cough?',['Yes','No'])
     ST = st.sidebar.selectbox('Do you have Sore throat?',['Yes','No'])
