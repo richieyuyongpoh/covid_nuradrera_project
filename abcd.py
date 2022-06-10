@@ -64,7 +64,7 @@ data = pd.read_csv('https://raw.githubusercontent.com/nuradrera/covid-19/main/Co
 X = data.drop('COVID-19', axis=1)
 Y = data['COVID-19']
 
-X = X.apply(LabelEncoder().fit_transform)(df)
+df = X.apply(LabelEncoder().fit_transform)
 
 clf = RandomForestClassifier()
 clf.fit(X, Y)
