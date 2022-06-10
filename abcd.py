@@ -9,64 +9,64 @@ This app predicts whether you are infected with Covid-19 or not based on your sy
 
 st.sidebar.header('User Input Parameters')
 
-Breathing Problem = st.sidebar.selectbox(
+BP = st.sidebar.selectbox(
     'Do you have Breathing Problem?',
      ['Yes','No'])
-Fever = st.sidebar.selectbox(
+F = st.sidebar.selectbox(
     'Do you have Fever?',
      ['Yes','No'])
-Dry Cough = st.sidebar.selectbox(
+DC = st.sidebar.selectbox(
     'Do you have Dry Cough?',
      ['Yes','No'])
-Sore throat = st.sidebar.selectbox(
+ST = st.sidebar.selectbox(
     'Do you have Sore throat?',
      ['Yes','No'])
-Running Nose = st.sidebar.selectbox(
+RN = st.sidebar.selectbox(
     'Do you have Running Nose?',
      ['Yes','No'])
-Asthma = st.sidebar.selectbox(
+A = st.sidebar.selectbox(
     'Do you have Asthma?',
      ['Yes','No'])
-Chronic Lung Disease = st.sidebar.selectbox(
+CLD = st.sidebar.selectbox(
     'Do you have Chronic Lung Disease?',
      ['Yes','No'])
-Headache = st.sidebar.selectbox(
+H = st.sidebar.selectbox(
     'Do you have Headache?',
      ['Yes','No'])
-Heart Disease = st.sidebar.selectbox(
+HD = st.sidebar.selectbox(
     'Do you have Heart Disease?',
      ['Yes','No'])
-Diabetes = st.sidebar.selectbox(
+D = st.sidebar.selectbox(
     'Do you have Diabetes?',
      ['Yes','No'])
-Hyper Tension = st.sidebar.selectbox(
+HT = st.sidebar.selectbox(
     'Do you have Hyper Tension?',
      ['Yes','No'])
-Fatigue = st.sidebar.selectbox(
+F = st.sidebar.selectbox(
     'Do you have Fatigue?',
      ['Yes','No'])
-Gastrointestinal = st.sidebar.selectbox(
+G = st.sidebar.selectbox(
     'Do you have Gastrointestinal?',
      ['Yes','No'])
-Abroad travel = st.sidebar.selectbox(
+AT = st.sidebar.selectbox(
     'Do you have Abroad travel?',
      ['Yes','No'])
-Contact with COVID Patient = st.sidebar.selectbox(
+CWCP = st.sidebar.selectbox(
     'Do you have Contact with COVID Patient?',
      ['Yes','No'])
-Attended Large Gathering = st.sidebar.selectbox(
+ALG = st.sidebar.selectbox(
     'Do you have Attended Large Gathering?',
      ['Yes','No'])
-Visited Public Exposed Places = st.sidebar.selectbox(
+VPEP = st.sidebar.selectbox(
     'Do you have Visited Public Exposed Places?',
      ['Yes','No'])
-Family working in Public Exposed Places = st.sidebar.selectbox(
+FWIPEP = st.sidebar.selectbox(
     'Do you have Family working in Public Exposed Places?',
      ['Yes','No'])
-Wearing Masks = st.sidebar.selectbox(
+WM = st.sidebar.selectbox(
     'Do you Wearing Masks?',
      ['Yes','No'])
-Sanitization from Market = st.sidebar.selectbox(
+SFM = st.sidebar.selectbox(
     'Do you Sanitization from Market?',
      ['Yes','No'])
     
