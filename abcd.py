@@ -9,68 +9,27 @@ This app predicts whether you are infected with Covid-19 or not based on your sy
 
 st.sidebar.header('User Input Parameters')
 
-BP = st.sidebar.selectbox(
-    'Do you have Breathing Problem?',
-     ['Yes','No'])
-FVR = st.sidebar.selectbox(
-    'Do you have Fever?',
-     ['Yes','No'])
-DC = st.sidebar.selectbox(
-    'Do you have Dry Cough?',
-     ['Yes','No'])
-ST = st.sidebar.selectbox(
-    'Do you have Sore throat?',
-     ['Yes','No'])
-RN = st.sidebar.selectbox(
-    'Do you have Running Nose?',
-     ['Yes','No'])
-A = st.sidebar.selectbox(
-    'Do you have Asthma?',
-     ['Yes','No'])
-CLD = st.sidebar.selectbox(
-    'Do you have Chronic Lung Disease?',
-     ['Yes','No'])
-H = st.sidebar.selectbox(
-    'Do you have Headache?',
-     ['Yes','No'])
-HD = st.sidebar.selectbox(
-    'Do you have Heart Disease?',
-     ['Yes','No'])
-D = st.sidebar.selectbox(
-    'Do you have Diabetes?',
-     ['Yes','No'])
-HT = st.sidebar.selectbox(
-    'Do you have Hyper Tension?',
-     ['Yes','No'])
-FTG = st.sidebar.selectbox(
-    'Do you have Fatigue?',
-     ['Yes','No'])
-G = st.sidebar.selectbox(
-    'Do you have Gastrointestinal?',
-     ['Yes','No'])
-AT = st.sidebar.selectbox(
-    'Do you have Abroad travel?',
-     ['Yes','No'])
-CWCP = st.sidebar.selectbox(
-    'Do you have Contact with COVID Patient?',
-     ['Yes','No'])
-ALG = st.sidebar.selectbox(
-    'Do you have Attended Large Gathering?',
-     ['Yes','No'])
-VPEP = st.sidebar.selectbox(
-    'Do you have Visited Public Exposed Places?',
-     ['Yes','No'])
-FWIPEP = st.sidebar.selectbox(
-    'Do you have Family working in Public Exposed Places?',
-     ['Yes','No'])
-WM = st.sidebar.selectbox(
-    'Do you Wearing Masks?',
-     ['Yes','No'])
-SFM = st.sidebar.selectbox(
-    'Do you Sanitization from Market?',
-     ['Yes','No'])
-    
-data = {'Breathing Problem': BP,
+def user_input_features():
+    BP = st.sidebar.selectbox('Do you have Breathing Problem?',['Yes','No'])
+    FVR = st.sidebar.selectbox('Do you have Fever?',['Yes','No'])
+    DC = st.sidebar.selectbox('Do you have Dry Cough?',['Yes','No'])
+    ST = st.sidebar.selectbox('Do you have Sore throat?',['Yes','No'])
+    RN = st.sidebar.selectbox('Do you have Running Nose?',['Yes','No'])
+    A = st.sidebar.selectbox('Do you have Asthma?',['Yes','No'])
+    CLD = st.sidebar.selectbox('Do you have Chronic Lung Disease?',['Yes','No'])
+    H = st.sidebar.selectbox('Do you have Headache?',['Yes','No'])'Do you have Heart Disease?',['Yes','No'])
+    D = st.sidebar.selectbox('Do you have Diabetes?',['Yes','No'])
+    HT = st.sidebar.selectbox('Do you have Hyper Tension?',['Yes','No'])
+    FTG = st.sidebar.selectbox('Do you have Fatigue?',['Yes','No'])
+    G = st.sidebar.selectbox('Do you have Gastrointestinal?',['Yes','No'])
+    AT = st.sidebar.selectbox('Do you have Abroad travel?',['Yes','No'])
+    CWCP = st.sidebar.selectbox('Do you have Contact with COVID Patient?',['Yes','No'])
+    ALG = st.sidebar.selectbox('Do you have Attended Large Gathering?',['Yes','No'])
+    VPEP = st.sidebar.selectbox('Do you have Visited Public Exposed Places?',['Yes','No'])
+    FWIPEP = st.sidebar.selectbox('Do you have Family working in Public Exposed Places?',['Yes','No'])
+    WM = st.sidebar.selectbox('Do you Wearing Masks?',['Yes','No'])
+    SFM = st.sidebar.selectbox('Do you Sanitization from Market?',['Yes','No'])
+    data = {'Breathing Problem': BP,
         'Fever': FVR,
         'Dry Cough': DC,
         'Sore throat': ST,
@@ -90,8 +49,8 @@ data = {'Breathing Problem': BP,
         'Family working in Public Exposed Places': FWIPEP,
         'Wearing Masks': WM,
         'Sanitization from Market': SFM}
-features = pd.DataFrame(data, index=[0])
-        return features
+    features = pd.DataFrame(data, index=[0])
+    return features
 
 df = user_input_features()
 
