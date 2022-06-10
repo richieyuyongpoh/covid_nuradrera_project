@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from sklearn.ensemble import RandomForestClassifier
 
 st.write("""
 # Simple COVID-19 Prediction App
@@ -63,9 +62,9 @@ data = pd.read_csv('https://raw.githubusercontent.com/nuradrera/covid-19/main/Co
 X = data.drop('COVID-19', axis=1)
 Y = data['COVID-19']
 
-clf = RandomForestClassifier()
-clf.fit(X, Y)
-prediction = clf.predict(df)
+# clf = RandomForestClassifier()
+# clf.fit(X, Y)
+# prediction = clf.predict(df)
 
 st.subheader('Prediction')
 # st.write(iris.target_names[prediction])
