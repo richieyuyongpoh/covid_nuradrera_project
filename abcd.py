@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
-
-from sklearn.ensemble import RandomForestClassifier
+import pandas as pd
 
 st.write("""
 # Simple COVID-19 Prediction App
@@ -10,72 +9,67 @@ This app predicts whether you are infected with Covid-19 or not based on your sy
 
 st.sidebar.header('User Input Parameters')
 
-def user_input_features():
-    Breathing Problem = st.sidebar.selectbox(
+Breathing Problem = st.sidebar.selectbox(
     'Do you have Breathing Problem?',
      ['Yes','No'])
-    Fever = st.sidebar.selectbox(
+Fever = st.sidebar.selectbox(
     'Do you have Fever?',
      ['Yes','No'])
-    Dry Cough = st.sidebar.selectbox(
+Dry Cough = st.sidebar.selectbox(
     'Do you have Dry Cough?',
      ['Yes','No'])
-    Sore throat = st.sidebar.selectbox(
+Sore throat = st.sidebar.selectbox(
     'Do you have Sore throat?',
      ['Yes','No'])
-    Running Nose = st.sidebar.selectbox(
+Running Nose = st.sidebar.selectbox(
     'Do you have Running Nose?',
      ['Yes','No'])
-    Asthma = st.sidebar.selectbox(
+Asthma = st.sidebar.selectbox(
     'Do you have Asthma?',
      ['Yes','No'])
-    Chronic Lung Disease = st.sidebar.selectbox(
+Chronic Lung Disease = st.sidebar.selectbox(
     'Do you have Chronic Lung Disease?',
      ['Yes','No'])
-    Headache = st.sidebar.selectbox(
+Headache = st.sidebar.selectbox(
     'Do you have Headache?',
      ['Yes','No'])
-    Heart Disease = st.sidebar.selectbox(
+Heart Disease = st.sidebar.selectbox(
     'Do you have Heart Disease?',
      ['Yes','No'])
-    Diabetes = st.sidebar.selectbox(
+Diabetes = st.sidebar.selectbox(
     'Do you have Diabetes?',
      ['Yes','No'])
-    Hyper Tension = st.sidebar.selectbox(
+Hyper Tension = st.sidebar.selectbox(
     'Do you have Hyper Tension?',
      ['Yes','No'])
-    Fatigue = st.sidebar.selectbox(
+Fatigue = st.sidebar.selectbox(
     'Do you have Fatigue?',
      ['Yes','No'])
-    Gastrointestinal = st.sidebar.selectbox(
+Gastrointestinal = st.sidebar.selectbox(
     'Do you have Gastrointestinal?',
      ['Yes','No'])
-    Abroad travel = st.sidebar.selectbox(
+Abroad travel = st.sidebar.selectbox(
     'Do you have Abroad travel?',
      ['Yes','No'])
-    Contact with COVID Patient = st.sidebar.selectbox(
+Contact with COVID Patient = st.sidebar.selectbox(
     'Do you have Contact with COVID Patient?',
      ['Yes','No'])
-    Attended Large Gathering = st.sidebar.selectbox(
+Attended Large Gathering = st.sidebar.selectbox(
     'Do you have Attended Large Gathering?',
      ['Yes','No'])
-    Visited Public Exposed Places = st.sidebar.selectbox(
+Visited Public Exposed Places = st.sidebar.selectbox(
     'Do you have Visited Public Exposed Places?',
      ['Yes','No'])
-    Family working in Public Exposed Places = st.sidebar.selectbox(
+Family working in Public Exposed Places = st.sidebar.selectbox(
     'Do you have Family working in Public Exposed Places?',
      ['Yes','No'])
-    Wearing Masks = st.sidebar.selectbox(
+Wearing Masks = st.sidebar.selectbox(
     'Do you Wearing Masks?',
      ['Yes','No'])
-    Sanitization from Market = st.sidebar.selectbox(
+Sanitization from Market = st.sidebar.selectbox(
     'Do you Sanitization from Market?',
      ['Yes','No'])
     
-#     sepal_length = st.sidebar.slider('Sepal length', 4.3, 7.9, 5.4)
-#     sepal_width = st.sidebar.slider('Sepal width', 2.0, 4.4, 3.4)
-#     petal_length = st.sidebar.slider('Petal length', 1.0, 6.9, 1.3)
-#     petal_width = st.sidebar.slider('Petal width', 0.1, 2.5, 0.2)
     data = {'Breathing Problem': Breathing Problem,
             'Fever': Fever,
             'Dry Cough': Dry Cough,
