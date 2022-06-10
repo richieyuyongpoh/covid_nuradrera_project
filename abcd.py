@@ -63,8 +63,8 @@ X = data.drop('COVID-19', axis=1)
 Y = data['COVID-19']
 
 # clf = RandomForestClassifier()
-# clf.fit(X, Y)
-# prediction = clf.predict(df)
+clf.fit(X, Y)
+prediction = clf.predict(df)
 
 st.subheader('Prediction')
 # st.write(iris.target_names[prediction])
