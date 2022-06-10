@@ -70,28 +70,28 @@ SFM = st.sidebar.selectbox(
     'Do you Sanitization from Market?',
      ['Yes','No'])
     
-    data = {'Breathing Problem': BP,
-            'Fever': FVR,
-            'Dry Cough': DC,
-            'Sore throat': ST,
-            'Running Nose': RN,
-            'Asthma': A,
-            'Chronic Lung Disease': CLD,
-            'Headache': H,
-            'Heart Disease': HD,
-            'Diabetes': D,
-            'Hyper Tension': HT,
-            'Fatigue': FTG,
-            'Gastrointestinal': G,
-            'Abroad travel': AT,
-            'Contact with COVID Patient': CWCP,
-            'Attended Large Gathering': ALG,
-            'Visited Public Exposed Places': VPEP,
-            'Family working in Public Exposed Places': FWIPEP,
-            'Wearing Masks': WM,
-            'Sanitization from Market': SFM}
-    features = pd.DataFrame(data, index=[0])
-    return features
+data = {'Breathing Problem': BP,
+        'Fever': FVR,
+        'Dry Cough': DC,
+        'Sore throat': ST,
+        'Running Nose': RN,
+        'Asthma': A,
+        'Chronic Lung Disease': CLD,
+        'Headache': H,
+        'Heart Disease': HD,
+        'Diabetes': D,
+        'Hyper Tension': HT,
+        'Fatigue': FTG,
+        'Gastrointestinal': G,
+        'Abroad travel': AT,
+        'Contact with COVID Patient': CWCP,
+        'Attended Large Gathering': ALG,
+        'Visited Public Exposed Places': VPEP,
+        'Family working in Public Exposed Places': FWIPEP,
+        'Wearing Masks': WM,
+        'Sanitization from Market': SFM}
+features = pd.DataFrame(data, index=[0])
+return features
 
 df = user_input_features()
 
