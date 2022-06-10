@@ -12,7 +12,7 @@ st.sidebar.header('User Input Parameters')
 BP = st.sidebar.selectbox(
     'Do you have Breathing Problem?',
      ['Yes','No'])
-F = st.sidebar.selectbox(
+FVR = st.sidebar.selectbox(
     'Do you have Fever?',
      ['Yes','No'])
 DC = st.sidebar.selectbox(
@@ -42,7 +42,7 @@ D = st.sidebar.selectbox(
 HT = st.sidebar.selectbox(
     'Do you have Hyper Tension?',
      ['Yes','No'])
-F = st.sidebar.selectbox(
+FTG = st.sidebar.selectbox(
     'Do you have Fatigue?',
      ['Yes','No'])
 G = st.sidebar.selectbox(
@@ -70,26 +70,26 @@ SFM = st.sidebar.selectbox(
     'Do you Sanitization from Market?',
      ['Yes','No'])
     
-    data = {'Breathing Problem': Breathing Problem,
-            'Fever': Fever,
-            'Dry Cough': Dry Cough,
-            'Sore throat': Sore throat
-            'Running Nose': Running Nose,
-            'Asthma': Asthma,
-            'Chronic Lung Disease': Chronic Lung Disease,
-            'Headache': Headache
-            'Heart Disease': Heart Disease,
-            'Diabetes': Diabetes,
-            'Hyper Tension': Hyper Tension,
-            'Fatigue': Fatigue
-            'Gastrointestinal': Gastrointestinal,
-            'Abroad travel': Abroad travel,
-            'Contact with COVID Patient': Contact with COVID Patient
-            'Attended Large Gathering': Attended Large Gathering,
-            'Visited Public Exposed Places': Visited Public Exposed Places,
-            'Family working in Public Exposed Places': Family working in Public Exposed Places,
-            'Wearing Masks': Wearing Masks
-            'Sanitization from Market': Sanitization from Market}
+    data = {'Breathing Problem': BP,
+            'Fever': FVR,
+            'Dry Cough': DC,
+            'Sore throat': ST,
+            'Running Nose': RN,
+            'Asthma': A,
+            'Chronic Lung Disease': CLD,
+            'Headache': H,
+            'Heart Disease': HD,
+            'Diabetes': D,
+            'Hyper Tension': HT,
+            'Fatigue': FTG,
+            'Gastrointestinal': G,
+            'Abroad travel': AT,
+            'Contact with COVID Patient': CWCP,
+            'Attended Large Gathering': ALG,
+            'Visited Public Exposed Places': VPEP,
+            'Family working in Public Exposed Places': FWIPEP,
+            'Wearing Masks': WM,
+            'Sanitization from Market': SFM}
     features = pd.DataFrame(data, index=[0])
     return features
 
