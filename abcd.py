@@ -11,14 +11,91 @@ This app predicts whether you are infected with Covid-19 or not based on your sy
 st.sidebar.header('User Input Parameters')
 
 def user_input_features():
-    sepal_length = st.sidebar.slider('Sepal length', 4.3, 7.9, 5.4)
-    sepal_width = st.sidebar.slider('Sepal width', 2.0, 4.4, 3.4)
-    petal_length = st.sidebar.slider('Petal length', 1.0, 6.9, 1.3)
-    petal_width = st.sidebar.slider('Petal width', 0.1, 2.5, 0.2)
-    data = {'sepal_length': sepal_length,
-            'sepal_width': sepal_width,
-            'petal_length': petal_length,
-            'petal_width': petal_width}
+    Breathing Problem = st.sidebar.selectbox(
+    'Do you have Breathing Problem?',
+     ['Yes','No'])
+    Fever = st.sidebar.selectbox(
+    'Do you have Fever?',
+     ['Yes','No'])
+    Dry Cough = st.sidebar.selectbox(
+    'Do you have Dry Cough?',
+     ['Yes','No'])
+    Sore throat = st.sidebar.selectbox(
+    'Do you have Sore throat?',
+     ['Yes','No'])
+    Running Nose = st.sidebar.selectbox(
+    'Do you have Running Nose?',
+     ['Yes','No'])
+    Asthma = st.sidebar.selectbox(
+    'Do you have Asthma?',
+     ['Yes','No'])
+    Chronic Lung Disease = st.sidebar.selectbox(
+    'Do you have Chronic Lung Disease?',
+     ['Yes','No'])
+    Headache = st.sidebar.selectbox(
+    'Do you have Headache?',
+     ['Yes','No'])
+    Heart Disease = st.sidebar.selectbox(
+    'Do you have Heart Disease?',
+     ['Yes','No'])
+    Diabetes = st.sidebar.selectbox(
+    'Do you have Diabetes?',
+     ['Yes','No'])
+    Hyper Tension = st.sidebar.selectbox(
+    'Do you have Hyper Tension?',
+     ['Yes','No'])
+    Fatigue = st.sidebar.selectbox(
+    'Do you have Fatigue?',
+     ['Yes','No'])
+    Gastrointestinal = st.sidebar.selectbox(
+    'Do you have Gastrointestinal?',
+     ['Yes','No'])
+    Abroad travel = st.sidebar.selectbox(
+    'Do you have Abroad travel?',
+     ['Yes','No'])
+    Contact with COVID Patient = st.sidebar.selectbox(
+    'Do you have Contact with COVID Patient?',
+     ['Yes','No'])
+    Attended Large Gathering = st.sidebar.selectbox(
+    'Do you have Attended Large Gathering?',
+     ['Yes','No'])
+    Visited Public Exposed Places = st.sidebar.selectbox(
+    'Do you have Visited Public Exposed Places?',
+     ['Yes','No'])
+    Family working in Public Exposed Places = st.sidebar.selectbox(
+    'Do you have Family working in Public Exposed Places?',
+     ['Yes','No'])
+    Wearing Masks = st.sidebar.selectbox(
+    'Do you Wearing Masks?',
+     ['Yes','No'])
+    Sanitization from Market = st.sidebar.selectbox(
+    'Do you Sanitization from Market?',
+     ['Yes','No'])
+    
+#     sepal_length = st.sidebar.slider('Sepal length', 4.3, 7.9, 5.4)
+#     sepal_width = st.sidebar.slider('Sepal width', 2.0, 4.4, 3.4)
+#     petal_length = st.sidebar.slider('Petal length', 1.0, 6.9, 1.3)
+#     petal_width = st.sidebar.slider('Petal width', 0.1, 2.5, 0.2)
+    data = {'Breathing Problem': Breathing Problem,
+            'Fever': Fever,
+            'Dry Cough': Dry Cough,
+            'Sore throat': Sore throat
+            'Running Nose': Running Nose,
+            'Asthma': Asthma,
+            'Chronic Lung Disease': Chronic Lung Disease,
+            'Headache': Headache
+            'Heart Disease': Heart Disease,
+            'Diabetes': Diabetes,
+            'Hyper Tension': Hyper Tension,
+            'Fatigue': Fatigue
+            'Gastrointestinal': Gastrointestinal,
+            'Abroad travel': Abroad travel,
+            'Contact with COVID Patient': Contact with COVID Patient
+            'Attended Large Gathering': Attended Large Gathering,
+            'Visited Public Exposed Places': Visited Public Exposed Places,
+            'Family working in Public Exposed Places': Family working in Public Exposed Places,
+            'Wearing Masks': Wearing Masks
+            'Sanitization from Market': Sanitization from Market}
     features = pd.DataFrame(data, index=[0])
     return features
 
@@ -27,22 +104,15 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-iris = pd.read_csv('https://raw.githubusercontent.com/nuradrera/my-final-assignment/main/IRIS.csv')
-X = iris[['sepal_length','sepal_width','petal_length','petal_width']]
-Y = iris['species']
+data = pd.read_csv('https://raw.githubusercontent.com/nuradrera/covid-19/main/Covid%20Dataset.csv')
+X = data.drop('COVID-19', axis=1)
+Y = data['COVID-19']
 
 clf = RandomForestClassifier()
 clf.fit(X, Y)
-
 prediction = clf.predict(df)
-prediction_proba = clf.predict_proba(df)
-
-st.subheader('Class labels and their corresponding index number')
-st.write(['setosa','versicolor', 'virginica'])
 
 st.subheader('Prediction')
 # st.write(iris.target_names[prediction])
 st.write(prediction)
 
-st.subheader('Prediction Probability')
-st.write(prediction_proba)
