@@ -58,7 +58,7 @@ def user_input_features():
 df = user_input_features()
 
 st.subheader('User Input parameters')
-st.write[df]
+st.write(df.T)
 
 data = pd.read_csv('https://raw.githubusercontent.com/nuradrera/covid-19/main/Covid%20Dataset.csv')
 X = data.drop('COVID-19', axis=1)
