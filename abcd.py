@@ -58,7 +58,7 @@ def user_input_features():
         'Sanitization from Market': T}
     features = pd.DataFrame(data, index=[0])
     return features
-data = pd.read_csv('https://raw.githubusercontent.com/nuradrera/covid-19/main/Covid%20Dataset.csv')
+data = pd.read_csv('https://raw.githubusercontent.com/nuradrera/covid-19/main/Covid19Dataset.csv')
 
 labelencoder1 = LabelEncoder() #kalau nak encoder lebih dari satu
 labelencoder2 = LabelEncoder()
