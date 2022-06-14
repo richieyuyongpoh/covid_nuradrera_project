@@ -15,7 +15,7 @@ This app predicts whether you are infected with Covid-19 or not based on your sy
 """)
 
 st.sidebar.header('User Input Parameters')
-st.sidebar.write('1 for YES, 0 for NO')
+st.sidebar.write('Note: 1 for YES, 0 for NO')
 
 def user_input_features():
     A = st.sidebar.selectbox('Do you have Breathing Problem?',['1','0'])
@@ -85,7 +85,7 @@ labelencoder18 = LabelEncoder()
 labelencoder19 = LabelEncoder()
 labelencoder20 = LabelEncoder()
 
-data['BreathingProblem'] = labelencoder1.fit_transform(data['BreathingProblem'])
+data['Breathing Problem'] = labelencoder1.fit_transform(data['Breathing Problem'])
 data['Fever'] = labelencoder2.fit_transform(data['Fever'])
 data['DryCough'] = labelencoder3.fit_transform(data['DryCough'])
 data['SoreThroat'] = labelencoder4.fit_transform(data['SoreThroat'])
