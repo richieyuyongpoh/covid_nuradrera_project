@@ -9,12 +9,12 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import classification_report
 
-st.write("""
+st.sidebar.write("""
 # Simple COVID-19 Prediction App
 This app predicts whether you are infected with Covid-19 or not based on your symptoms!
 """)
 
-st.sidebar.header('User Input Parameters')
+st.header('User Input Parameters')
 st.sidebar.write('Note: 1 for YES, 0 for NO')
 
 def user_input_features():
