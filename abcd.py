@@ -10,11 +10,11 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import classification_report
 
 st.sidebar.write("""
-# Simple COVID-19 Prediction App
+## Simple COVID-19 Prediction App
 This app predicts whether you are infected with Covid-19 or not based on your symptoms!
 """)
 
-st.header('User Input Parameters')
+st.write('User Input Parameters')
 st.sidebar.write('Note: 1 for YES, 0 for NO')
 
 def user_input_features():
