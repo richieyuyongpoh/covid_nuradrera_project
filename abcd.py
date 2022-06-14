@@ -14,7 +14,7 @@ st.write("""
 This app predicts whether you are infected with Covid-19 or not based on your symptoms!
 """)
 
-st.sidebar.write('User Input Parameters')
+st.sidebar.write('**User Input Parameters**')
 st.sidebar.write('Note: 1 for YES, 0 for NO')
 
 def user_input_features():
