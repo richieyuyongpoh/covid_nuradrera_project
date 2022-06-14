@@ -9,35 +9,35 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import classification_report
 
-st.sidebar.write("""
+st.write("""
 ## Simple COVID-19 Prediction App
 This app predicts whether you are infected with Covid-19 or not based on your symptoms!
 """)
 
-st.write('User Input Parameters')
+st.sidebar.write('User Input Parameters')
 st.sidebar.write('Note: 1 for YES, 0 for NO')
 
 def user_input_features():
-    A = st.selectbox('Do you have Breathing Problem?',['1','0'])
-    B = st.selectbox('Do you have Fever?',['1','0'])
-    C = st.selectbox('Do you have Dry Cough?',['1','0'])
-    D = st.selectbox('Do you have Sore throat?',['1','0'])
-    E = st.selectbox('Do you have Running Nose?',['1','0'])
-    F = st.selectbox('Do you have Asthma?',['1','0'])
-    G = st.selectbox('Do you have Chronic Lung Disease?',['1','0'])
-    H = st.selectbox('Do you have Headache?',['1','0'])
-    I = st.selectbox('Do you have Heart Disease?',['1','0'])
-    J = st.selectbox('Do you have Diabetes?',['1','0'])
-    K = st.selectbox('Do you have Hyper Tension?',['1','0'])
-    L = st.selectbox('Do you have Fatigue?',['1','0'])
-    M = st.selectbox('Do you have Gastrointestinal?',['1','0'])
-    N = st.selectbox('Do you have Abroad travel?',['1','0'])
-    O = st.selectbox('Do you have Contact with COVID Patient?',['1','0'])
-    P = st.selectbox('Do you have Attended Large Gathering?',['1','0'])
-    Q = st.selectbox('Do you have Visited Public Exposed Places?',['1','0'])
-    R = st.selectbox('Do you have Family working in Public Exposed Places?',['1','0'])
-    S = st.selectbox('Do you Wearing Masks?',['1','0'])
-    T = st.selectbox('Do you Sanitization from Market?',['1','0'])
+    A = st.sidebar.selectbox('Do you have Breathing Problem?',['1','0'])
+    B = st.sidebar.selectbox('Do you have Fever?',['1','0'])
+    C = st.sidebar.selectbox('Do you have Dry Cough?',['1','0'])
+    D = st.sidebar.selectbox('Do you have Sore throat?',['1','0'])
+    E = st.sidebar.selectbox('Do you have Running Nose?',['1','0'])
+    F = st.sidebar.selectbox('Do you have Asthma?',['1','0'])
+    G = st.sidebar.selectbox('Do you have Chronic Lung Disease?',['1','0'])
+    H = st.sidebar.selectbox('Do you have Headache?',['1','0'])
+    I = st.sidebar.selectbox('Do you have Heart Disease?',['1','0'])
+    J = st.sidebar.selectbox('Do you have Diabetes?',['1','0'])
+    K = st.sidebar.selectbox('Do you have Hyper Tension?',['1','0'])
+    L = st.sidebar.selectbox('Do you have Fatigue?',['1','0'])
+    M = st.sidebar.selectbox('Do you have Gastrointestinal?',['1','0'])
+    N = st.sidebar.selectbox('Do you have Abroad travel?',['1','0'])
+    O = st.sidebar.selectbox('Do you have Contact with COVID Patient?',['1','0'])
+    P = st.sidebar.selectbox('Do you have Attended Large Gathering?',['1','0'])
+    Q = st.sidebar.selectbox('Do you have Visited Public Exposed Places?',['1','0'])
+    R = st.sidebar.selectbox('Do you have Family working in Public Exposed Places?',['1','0'])
+    S = st.sidebar.selectbox('Do you Wearing Masks?',['1','0'])
+    T = st.sidebar.selectbox('Do you Sanitization from Market?',['1','0'])
     
     data = {
         'Breathing Problem': A,
