@@ -15,6 +15,7 @@ This app predicts whether you are infected with Covid-19 or not based on your sy
 """)
 
 st.sidebar.header('User Input Parameters')
+st.sidebar.write('1 for YES, 0 for NO')
 
 def user_input_features():
     A = st.sidebar.selectbox('Do you have Breathing Problem?',['Yes','No'])
@@ -49,8 +50,8 @@ def user_input_features():
         'Heart Disease': I,
         'Diabetes': J,
         'Hyper Tension': K,
-        'Fatigue': L,
-        'Gastrointestinal': M,
+        'Fatigue ': L,
+        'Gastrointestinal ': M,
         'Abroad travel': N,
         'Contact with COVID Patient': O,
         'Attended Large Gathering': P,
@@ -62,7 +63,7 @@ def user_input_features():
     return features
 data = pd.read_csv('https://raw.githubusercontent.com/nuradrera/covid-19/main/Covid19Dataset.csv')
 
-labelencoder1 = LabelEncoder() #kalau nak encoder lebih dari satu
+labelencoder1 = LabelEncoder()
 labelencoder2 = LabelEncoder()
 labelencoder3 = LabelEncoder()
 labelencoder4 = LabelEncoder()
@@ -94,12 +95,11 @@ data['Headache'] = labelencoder8.fit_transform(data['Headache'])
 data['HeartDisease'] = labelencoder9.fit_transform(data['HeartDisease'])
 data['Diabetes'] = labelencoder10.fit_transform(data['Diabetes'])
 data['HyperTension'] = labelencoder11.fit_transform(data['HyperTension'])
-data['Fatigue'] = labelencoder12.fit_transform(data['Fatigue'])
-data['Gastrointestinal'] = labelencoder13.fit_transform(data['Gastrointestinal'])
+data['Fatigue '] = labelencoder12.fit_transform(data['Fatigue '])
+data['Gastrointestinal '] = labelencoder13.fit_transform(data['Gastrointestinal '])
 data['AbroadTravel'] = labelencoder14.fit_transform(data['AbroadTravel'])
 data['ContactWithCOVIDPatient'] = labelencoder15.fit_transform(data['ContactWithCOVIDPatient'])
 data['AttendedLargeGathering'] = labelencoder16.fit_transform(data['AttendedLargeGathering'])
-
 data['VisitedPublicExposedPlaces'] = labelencoder17.fit_transform(data['VisitedPublicExposedPlaces'])
 data['FamilyWorkingInPublicExposedPlaces'] = labelencoder18.fit_transform(data['FamilyWorkingInPublicExposedPlaces'])
 data['WearingMasks'] = labelencoder19.fit_transform(data['WearingMasks'])
