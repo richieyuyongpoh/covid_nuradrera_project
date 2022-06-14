@@ -120,7 +120,7 @@ clf = RandomForestClassifier()
 clf.fit(X, Y)
 prediction = clf.predict(df)
 
-st.subheader('Prediction')
+st.subheader('Your prediction to have Covid-19 is:')
 # st.write(iris.target_names[prediction])
 st.write(prediction)
 
