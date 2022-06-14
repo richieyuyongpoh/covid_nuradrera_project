@@ -18,47 +18,48 @@ st.sidebar.header('User Input Parameters')
 st.sidebar.write('1 for YES, 0 for NO')
 
 def user_input_features():
-    A = st.sidebar.selectbox('Do you have Breathing Problem?',['Yes','No'])
-    B = st.sidebar.selectbox('Do you have Fever?',['Yes','No'])
-    C = st.sidebar.selectbox('Do you have Dry Cough?',['Yes','No'])
-    D = st.sidebar.selectbox('Do you have Sore throat?',['Yes','No'])
-    E = st.sidebar.selectbox('Do you have Running Nose?',['Yes','No'])
-    F = st.sidebar.selectbox('Do you have Asthma?',['Yes','No'])
-    G = st.sidebar.selectbox('Do you have Chronic Lung Disease?',['Yes','No'])
-    H = st.sidebar.selectbox('Do you have Headache?',['Yes','No'])
-    I = st.sidebar.selectbox('Do you have Heart Disease?',['Yes','No'])
-    J = st.sidebar.selectbox('Do you have Diabetes?',['Yes','No'])
-    K = st.sidebar.selectbox('Do you have Hyper Tension?',['Yes','No'])
-    L = st.sidebar.selectbox('Do you have Fatigue?',['Yes','No'])
-    M = st.sidebar.selectbox('Do you have Gastrointestinal?',['Yes','No'])
-    N = st.sidebar.selectbox('Do you have Abroad travel?',['Yes','No'])
-    O = st.sidebar.selectbox('Do you have Contact with COVID Patient?',['Yes','No'])
-    P = st.sidebar.selectbox('Do you have Attended Large Gathering?',['Yes','No'])
-    Q = st.sidebar.selectbox('Do you have Visited Public Exposed Places?',['Yes','No'])
-    R = st.sidebar.selectbox('Do you have Family working in Public Exposed Places?',['Yes','No'])
-    S = st.sidebar.selectbox('Do you Wearing Masks?',['Yes','No'])
-    T = st.sidebar.selectbox('Do you Sanitization from Market?',['Yes','No'])
+    A = st.sidebar.selectbox('Do you have Breathing Problem?',['1','0'])
+    B = st.sidebar.selectbox('Do you have Fever?',['1','0'])
+    C = st.sidebar.selectbox('Do you have Dry Cough?',['1','0'])
+    D = st.sidebar.selectbox('Do you have Sore throat?',['1','0'])
+    E = st.sidebar.selectbox('Do you have Running Nose?',['1','0'])
+    F = st.sidebar.selectbox('Do you have Asthma?',['1','0'])
+    G = st.sidebar.selectbox('Do you have Chronic Lung Disease?',['1','0'])
+    H = st.sidebar.selectbox('Do you have Headache?',['1','0'])
+    I = st.sidebar.selectbox('Do you have Heart Disease?',['1','0'])
+    J = st.sidebar.selectbox('Do you have Diabetes?',['1','0'])
+    K = st.sidebar.selectbox('Do you have Hyper Tension?',['1','0'])
+    L = st.sidebar.selectbox('Do you have Fatigue?',['1','0'])
+    M = st.sidebar.selectbox('Do you have Gastrointestinal?',['1','0'])
+    N = st.sidebar.selectbox('Do you have Abroad travel?',['1','0'])
+    O = st.sidebar.selectbox('Do you have Contact with COVID Patient?',['1','0'])
+    P = st.sidebar.selectbox('Do you have Attended Large Gathering?',['1','0'])
+    Q = st.sidebar.selectbox('Do you have Visited Public Exposed Places?',['1','0'])
+    R = st.sidebar.selectbox('Do you have Family working in Public Exposed Places?',['1','0'])
+    S = st.sidebar.selectbox('Do you Wearing Masks?',['1','0'])
+    T = st.sidebar.selectbox('Do you Sanitization from Market?',['1','0'])
     
-    data = {'Breathing Problem': A,
+    data = {
+        'Breathing Problem': A,
         'Fever': B,
-        'Dry Cough': C,
-        'Sore throat': D,
-        'Running Nose': E,
+        'DryCough': C,
+        'SoreThroat': D,
+        'RunningNose': E,
         'Asthma': F,
-        'Chronic Lung Disease': G,
+        'ChronicLungDisease': G,
         'Headache': H,
-        'Heart Disease': I,
+        'HeartDisease': I,
         'Diabetes': J,
-        'Hyper Tension': K,
+        'HyperTension': K,
         'Fatigue ': L,
         'Gastrointestinal ': M,
-        'Abroad travel': N,
-        'Contact with COVID Patient': O,
-        'Attended Large Gathering': P,
-        'Visited Public Exposed Places': Q,
-        'Family working in Public Exposed Places': R,
-        'Wearing Masks': S,
-        'Sanitization from Market': T}
+        'AbroadTravel': N,
+        'ContactWithCOVIDPatient': O,
+        'AttendedLargeGathering': P,
+        'VisitedPublicExposedPlaces': Q,
+        'FamilyWorkingInPublicExposedPlaces': R,
+        'WearingMasks': S,
+        'SanitizationFromMarket': T}
     features = pd.DataFrame(data, index=[0])
     return features
 data = pd.read_csv('https://raw.githubusercontent.com/nuradrera/covid-19/main/Covid19Dataset.csv')
