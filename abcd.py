@@ -105,8 +105,8 @@ data['FamilyWorkingInPublicExposedPlaces'] = labelencoder18.fit_transform(data['
 data['WearingMasks'] = labelencoder19.fit_transform(data['WearingMasks'])
 data['SanitizationFromMarket'] = labelencoder20.fit_transform(data['SanitizationFromMarket'])
 
-X = data.drop('COVID-19', axis=1)
-Y = data['COVID-19']
+X = data.drop('COVID19', axis=1)
+Y = data['COVID19']
 
 df = user_input_features()
 
