@@ -128,8 +128,6 @@ st.subheader('Your prediction to have Covid-19 is:')
 # st.write(iris.target_names[prediction])
 st.write(prediction)
 
-from PIL import Image
-image = Image.open('vaccine_image.jpg')
-st.image(image, caption = '#Vaccines save lives')
-
-
+# from PIL import Image
+# image = Image.open('vaccine_image.jpg')
+# st.image(image, caption = 'Vaccines save lives')
