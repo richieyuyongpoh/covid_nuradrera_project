@@ -40,7 +40,7 @@ def user_input_features():
     T = st.sidebar.selectbox('Do you Sanitization from Market?',['1','0'])
     
     data = {
-        'Breathing Problem': A,
+        'BreathingProblem': A,
         'Fever': B,
         'DryCough': C,
         'SoreThroat': D,
@@ -51,8 +51,8 @@ def user_input_features():
         'HeartDisease': I,
         'Diabetes': J,
         'HyperTension': K,
-        'Fatigue ': L,
-        'Gastrointestinal ': M,
+        'Fatigue': L,
+        'Gastrointestinal': M,
         'AbroadTravel': N,
         'ContactWithCOVIDPatient': O,
         'AttendedLargeGathering': P,
@@ -62,7 +62,7 @@ def user_input_features():
         'SanitizationFromMarket': T}
     features = pd.DataFrame(data, index=[0])
     return features
-data = pd.read_csv('https://raw.githubusercontent.com/nuradrera/covid-19/main/Covid19Dataset.csv')
+data = pd.read_csv('https://github.com/nuradrera/covid-19/blob/main/Covid%20Dataset.csv')
 
 labelencoder1 = LabelEncoder()
 labelencoder2 = LabelEncoder()
@@ -85,7 +85,7 @@ labelencoder18 = LabelEncoder()
 labelencoder19 = LabelEncoder()
 labelencoder20 = LabelEncoder()
 
-data['Breathing Problem'] = labelencoder1.fit_transform(data['Breathing Problem'])
+data['BreathingProblem'] = labelencoder1.fit_transform(data['BreathingProblem'])
 data['Fever'] = labelencoder2.fit_transform(data['Fever'])
 data['DryCough'] = labelencoder3.fit_transform(data['DryCough'])
 data['SoreThroat'] = labelencoder4.fit_transform(data['SoreThroat'])
@@ -96,8 +96,8 @@ data['Headache'] = labelencoder8.fit_transform(data['Headache'])
 data['HeartDisease'] = labelencoder9.fit_transform(data['HeartDisease'])
 data['Diabetes'] = labelencoder10.fit_transform(data['Diabetes'])
 data['HyperTension'] = labelencoder11.fit_transform(data['HyperTension'])
-data['Fatigue '] = labelencoder12.fit_transform(data['Fatigue '])
-data['Gastrointestinal '] = labelencoder13.fit_transform(data['Gastrointestinal '])
+data['Fatigue'] = labelencoder12.fit_transform(data['Fatigue'])
+data['Gastrointestinal'] = labelencoder13.fit_transform(data['Gastrointestinal'])
 data['AbroadTravel'] = labelencoder14.fit_transform(data['AbroadTravel'])
 data['ContactWithCOVIDPatient'] = labelencoder15.fit_transform(data['ContactWithCOVIDPatient'])
 data['AttendedLargeGathering'] = labelencoder16.fit_transform(data['AttendedLargeGathering'])
