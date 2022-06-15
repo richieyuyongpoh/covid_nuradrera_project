@@ -128,6 +128,11 @@ st.subheader('Your prediction to have Covid-19 is:')
 # st.write(iris.target_names[prediction])
 st.write(prediction)
 
-# from PIL import Image
-# image = Image.open('vaccine_image.jpg')
-# st.image(image, caption = 'Vaccines save lives')
+# video_file = open('myvideo.mp4', 'rb')
+# video_bytes = video_file.read()
+
+# st.video(video_bytes)
+
+from PIL import Image
+image = Image.open('vaccine_image.jpg')
+st.image(image, caption = 'Vaccines save lives')
