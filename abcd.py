@@ -130,6 +130,7 @@ st.write(prediction)
 
 from PIL import Image
 image = Image.open('vaccine_image.jpg')
-st.image(image, caption='Let's get vaccinated!!!')
+st.image(image, caption='Vaccines save lives.
+Ask, don’t assume. Trust the facts.')
 
 
