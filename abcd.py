@@ -18,7 +18,7 @@ st.sidebar.write('**User Input Parameters**')
 st.sidebar.write('Note: 1 for YES, 0 for NO')
 
 from PIL import Image
-image = Image.open('covid19_image.jpg')
+image = Image.open('virus_image.jpg')
 st.image(image, caption=' ')
 
 def user_input_features():
