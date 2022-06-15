@@ -139,5 +139,6 @@ st.image(image, caption = 'Vaccines save lives')
 
 st.write("""
 # Vaccine Save Lives!!!
-##Ask, don’t assume. Trust the facts.
 """)
+st.subheader('Ask, don’t assume. Trust the facts.')
+
