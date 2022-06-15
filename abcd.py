@@ -17,6 +17,10 @@ This app predicts whether you are infected with Covid-19 or not based on your sy
 st.sidebar.write('**User Input Parameters**')
 st.sidebar.write('Note: 1 for YES, 0 for NO')
 
+from PIL import Image
+image = Image.open('covid19_image.jpg')
+st.image(image, caption=' ')
+
 def user_input_features():
     A = st.sidebar.selectbox('Do you have Breathing Problem?',['1','0'])
     B = st.sidebar.selectbox('Do you have Fever?',['1','0'])
@@ -123,4 +127,9 @@ prediction = clf.predict(df)
 st.subheader('Your prediction to have Covid-19 is:')
 # st.write(iris.target_names[prediction])
 st.write(prediction)
+
+from PIL import Image
+image = Image.open('vaccine_image.jpg')
+st.image(image, caption='Let's get vaccinated!!!')
+
 
