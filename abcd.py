@@ -14,6 +14,19 @@ st.write("""
 This app predicts whether you are infected with Covid-19 or not based on your symptoms!
 """)
 
+st.title('Simple COVID-19 Prediction App')
+st.write('Please do not refer this as your primary indicator to predict COVID-19 and consult with the nearest health clinic for more information.')
+# st.write('Please consult with the nearest health clinic for more information.')
+
+st.write("""
+This web app was created by [Nur Adrera](www.linkedin.com/in/nuradrera)
+""")
+
+st.write("""
+[Dr. Yu Yong Poh](https://www.linkedin.com/in/yong-poh-yu/) and [Dr. Tan Yan Bin](https://www.linkedin.com/in/yyanbin-tan/) deserve special thanks for their guidance and assistance in making this a success.
+""")
+
+
 st.sidebar.write('**User Input Parameters**')
 st.sidebar.write('Note: 1 for YES, 0 for NO')
 
