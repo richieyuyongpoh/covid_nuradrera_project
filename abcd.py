@@ -13,8 +13,6 @@ st.write("""
 # Simple COVID-19 Prediction App
 This app predicts whether you are infected with Covid-19 or not based on your symptoms!
 """)
-
-st.title('Simple COVID-19 Prediction App')
 st.write('Please do not use this as your primary indicator for predicting COVID-19 and seek more information from your local health clinic.')
 
 st.write("""
