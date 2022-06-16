@@ -15,11 +15,10 @@ This app predicts whether you are infected with Covid-19 or not based on your sy
 """)
 
 st.title('Simple COVID-19 Prediction App')
-st.write('Please do not refer this as your primary indicator to predict COVID-19 and consult with the nearest health clinic for more information.')
-# st.write('Please consult with the nearest health clinic for more information.')
+st.write('Please do not use this as your primary indicator for predicting COVID-19 and seek more information from your local health clinic.')
 
 st.write("""
-This web app was created by [Nur Adrera](www.linkedin.com/in/nuradrera)
+This web app was created by [Nur Adrera](https://www.linkedin.com/in/nuradrera/).
 """)
 
 st.write("""
@@ -146,12 +145,11 @@ st.write(prediction)
 
 # st.video(video_bytes)
 
-from PIL import Image
-image = Image.open('vaccine_image.jpg')
-st.image(image, caption = 'Vaccines save lives')
-
 st.write("""
-# Vaccine Save Lives!!!
+# Let us get vaccinated to save our lives!!!
 """)
 st.subheader('Ask, don’t assume. Trust the facts.')
 
+from PIL import Image
+image = Image.open('vaccine_image.jpg')
+st.image(image, caption = ' ')
